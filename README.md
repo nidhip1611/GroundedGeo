@@ -181,3 +181,6 @@ print(f"Loaded {len(runner.queries)} queries")
 - [BoundaryBench](https://github.com/nidhip1611/BoundaryBench) — LLM geospatial boundary diagnosis
 - [GroundedGeo](https://github.com/nidhip1611/GroundedGeo) — RAG citation grounding benchmark
 - [NewsScope](https://github.com/nidhip1611/NewsScope) — Cross-domain news verification
+
+## Releases
+- v1.0.0 — initial dataset + frozen test results (Zenodo DOI: …)

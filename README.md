@@ -170,7 +170,7 @@ print(f"Loaded {len(runner.queries)} queries")
 ## 📧 Contact
 
 - **Author**: Nidhi Pandya
-- **Email**: np59133n@pace.edu
+- **Email**: nidhipandya1606@gmail.com
 - **Institution**: Pace University, Seidenberg School of Computer Science
 
 ---

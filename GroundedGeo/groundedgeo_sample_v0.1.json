@@ -1,0 +1,1473 @@
+{
+  "metadata": {
+    "name": "GroundedGeo Evaluation Dataset",
+    "version": "0.1.0-sample",
+    "description": "Sample dataset for schema validation",
+    "created": "2026-01-02T19:28:53.579884",
+    "author": "Nidhi Pandya",
+    "total_queries": 50,
+    "buckets": [
+      "stale_fact",
+      "boundary_adjacent",
+      "conflicting_sources",
+      "overlapping_jurisdiction",
+      "ambiguous_name"
+    ],
+    "splits": [
+      "test",
+      "dev"
+    ]
+  },
+  "queries": [
+    {
+      "query_id": "gg_9e5e5bea",
+      "query_text": "What county is 450 County Line Rd, Greenville, SC in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Greenville",
+        "state": "SC",
+        "lat": 34.8526,
+        "lon": -82.394,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "450 County Line Rd is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Greenville"
+    },
+    {
+      "query_id": "gg_27aa0919",
+      "query_text": "What county is 123 State St, Texarkana, TX in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Texarkana",
+        "state": "TX",
+        "lat": 33.4418,
+        "lon": -94.0377,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "123 State St is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Texarkana"
+    },
+    {
+      "query_id": "gg_83394107",
+      "query_text": "What county is 789 Border Ave, El Paso, TX in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "El Paso",
+        "state": "TX",
+        "lat": 31.7619,
+        "lon": -106.485,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "789 Border Ave is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in El Paso"
+    },
+    {
+      "query_id": "gg_9ef26004",
+      "query_text": "What county is 100 Division Blvd, Kansas City, MO in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Kansas City",
+        "state": "MO",
+        "lat": 39.0997,
+        "lon": -94.5786,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "100 Division Blvd is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Kansas City"
+    },
+    {
+      "query_id": "gg_3dd7cfed",
+      "query_text": "What county is 555 Boundary Pkwy, Bristol, TN in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Bristol",
+        "state": "TN",
+        "lat": 36.5951,
+        "lon": -82.1887,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "555 Boundary Pkwy is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Bristol"
+    },
+    {
+      "query_id": "gg_ec73717c",
+      "query_text": "What county is 321 Line Rd, Delmar, NY in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Delmar",
+        "state": "NY",
+        "lat": 42.6223,
+        "lon": -73.8326,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "321 Line Rd is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Delmar"
+    },
+    {
+      "query_id": "gg_6621425e",
+      "query_text": "What county is 888 Edge Dr, Union City, NJ in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Union City",
+        "state": "NJ",
+        "lat": 40.7795,
+        "lon": -74.0324,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "888 Edge Dr is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Union City"
+    },
+    {
+      "query_id": "gg_bacbea12",
+      "query_text": "What county is 200 Split Rock Rd, Stamford, CT in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Stamford",
+        "state": "CT",
+        "lat": 41.0534,
+        "lon": -73.5387,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "200 Split Rock Rd is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Stamford"
+    },
+    {
+      "query_id": "gg_5e96d30c",
+      "query_text": "What county is 444 Frontier St, Nogales, AZ in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Nogales",
+        "state": "AZ",
+        "lat": 31.3404,
+        "lon": -110.9343,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "444 Frontier St is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Nogales"
+    },
+    {
+      "query_id": "gg_4f75188b",
+      "query_text": "What county is 600 Divide Ave, Lakewood, CO in?",
+      "query_type": "boundary",
+      "context": {
+        "city": "Lakewood",
+        "state": "CO",
+        "lat": 39.7047,
+        "lon": -105.0814,
+        "uncertainty_radius_m": 50.0
+      },
+      "gold_answer": "[County TBD - requires GIS lookup]",
+      "gold_claims": [
+        {
+          "claim_text": "600 Divide Ave is in [County TBD]",
+          "claim_type": "boundary",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "boundary_adjacent",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Address near boundary in Lakewood"
+    },
+    {
+      "query_id": "gg_d7620c99",
+      "query_text": "What county is Springfield in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Springfield",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Springfield exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Springfield is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Springfield exists in multiple US states"
+    },
+    {
+      "query_id": "gg_0b74dc28",
+      "query_text": "What county is Washington in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Washington",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Washington exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Washington is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Washington exists in multiple US states"
+    },
+    {
+      "query_id": "gg_b84b5ba3",
+      "query_text": "What county is Franklin in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Franklin",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Franklin exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Franklin is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Franklin exists in multiple US states"
+    },
+    {
+      "query_id": "gg_aca143ef",
+      "query_text": "What county is Clinton in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Clinton",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Clinton exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Clinton is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Clinton exists in multiple US states"
+    },
+    {
+      "query_id": "gg_c337710a",
+      "query_text": "What county is Madison in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Madison",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Madison exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Madison is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Madison exists in multiple US states"
+    },
+    {
+      "query_id": "gg_9b1bfb8e",
+      "query_text": "What county is Georgetown in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Georgetown",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Georgetown exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Georgetown is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Georgetown exists in multiple US states"
+    },
+    {
+      "query_id": "gg_ae38953c",
+      "query_text": "What county is Salem in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Salem",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Salem exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Salem is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Salem exists in multiple US states"
+    },
+    {
+      "query_id": "gg_9d2ec04a",
+      "query_text": "What county is Fairview in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Fairview",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Fairview exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Fairview is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Fairview exists in multiple US states"
+    },
+    {
+      "query_id": "gg_618fe907",
+      "query_text": "What county is Manchester in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Manchester",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Manchester exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Manchester is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Manchester exists in multiple US states"
+    },
+    {
+      "query_id": "gg_bc04cd26",
+      "query_text": "What county is Bristol in?",
+      "query_type": "place_disambiguation",
+      "context": {
+        "city": "Bristol",
+        "state": null,
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[AMBIGUOUS - Bristol exists in multiple states]",
+      "gold_claims": [
+        {
+          "claim_text": "Bristol is in [requires clarification]",
+          "claim_type": "disambiguation",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "ambiguous_name",
+      "ambiguity_label": "needs_clarification",
+      "conflict_label": "none",
+      "freshness_requirement_days": null,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Bristol exists in multiple US states"
+    },
+    {
+      "query_id": "gg_fbd22991",
+      "query_text": "What jurisdiction handles building permits for 450 County Line Rd, Greenville, SC?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Greenville",
+        "state": "SC",
+        "lat": 34.8526,
+        "lon": -82.394,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "building permits handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Greenville"
+    },
+    {
+      "query_id": "gg_d222afe3",
+      "query_text": "What jurisdiction handles zoning variances for 123 State St, Texarkana, TX?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Texarkana",
+        "state": "TX",
+        "lat": 33.4418,
+        "lon": -94.0377,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "zoning variances handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Texarkana"
+    },
+    {
+      "query_id": "gg_2c8b8e2b",
+      "query_text": "What jurisdiction handles business licenses for 789 Border Ave, El Paso, TX?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "El Paso",
+        "state": "TX",
+        "lat": 31.7619,
+        "lon": -106.485,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "business licenses handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for El Paso"
+    },
+    {
+      "query_id": "gg_ef6d4b88",
+      "query_text": "What jurisdiction handles parking permits for 100 Division Blvd, Kansas City, MO?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Kansas City",
+        "state": "MO",
+        "lat": 39.0997,
+        "lon": -94.5786,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "parking permits handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Kansas City"
+    },
+    {
+      "query_id": "gg_70144d7b",
+      "query_text": "What jurisdiction handles noise complaints for 555 Boundary Pkwy, Bristol, TN?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Bristol",
+        "state": "TN",
+        "lat": 36.5951,
+        "lon": -82.1887,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "noise complaints handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Bristol"
+    },
+    {
+      "query_id": "gg_b237cc34",
+      "query_text": "What jurisdiction handles trash collection for 321 Line Rd, Delmar, NY?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Delmar",
+        "state": "NY",
+        "lat": 42.6223,
+        "lon": -73.8326,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "trash collection handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Delmar"
+    },
+    {
+      "query_id": "gg_159e6118",
+      "query_text": "What jurisdiction handles water service for 888 Edge Dr, Union City, NJ?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Union City",
+        "state": "NJ",
+        "lat": 40.7795,
+        "lon": -74.0324,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "water service handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Union City"
+    },
+    {
+      "query_id": "gg_884f8cd3",
+      "query_text": "What jurisdiction handles road maintenance for 200 Split Rock Rd, Stamford, CT?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Stamford",
+        "state": "CT",
+        "lat": 41.0534,
+        "lon": -73.5387,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "road maintenance handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Stamford"
+    },
+    {
+      "query_id": "gg_07dd9bfb",
+      "query_text": "What jurisdiction handles building permits for 444 Frontier St, Nogales, AZ?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Nogales",
+        "state": "AZ",
+        "lat": 31.3404,
+        "lon": -110.9343,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "building permits handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Nogales"
+    },
+    {
+      "query_id": "gg_0062e700",
+      "query_text": "What jurisdiction handles zoning variances for 600 Divide Ave, Lakewood, CO?",
+      "query_type": "jurisdiction",
+      "context": {
+        "city": "Lakewood",
+        "state": "CO",
+        "lat": 39.7047,
+        "lon": -105.0814,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Multiple jurisdictions may apply]",
+      "gold_claims": [
+        {
+          "claim_text": "zoning variances handled by [city/county TBD]",
+          "claim_type": "jurisdiction",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "overlapping_jurisdiction",
+      "ambiguity_label": "multi_valid",
+      "conflict_label": "none",
+      "freshness_requirement_days": 365,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Service jurisdiction unclear for Lakewood"
+    },
+    {
+      "query_id": "gg_83ca8eae",
+      "query_text": "What are the hours of the DMV in Brooklyn, NY?",
+      "query_type": "poi",
+      "context": {
+        "city": "Brooklyn",
+        "state": "NY",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "DMV hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_96f5973e",
+      "query_text": "What are the hours of the county clerk office in Los Angeles, CA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Los Angeles",
+        "state": "CA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "county clerk office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_7dd3e1d1",
+      "query_text": "What are the hours of the tax assessor office in Chicago, IL?",
+      "query_type": "poi",
+      "context": {
+        "city": "Chicago",
+        "state": "IL",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "tax assessor office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_f107da35",
+      "query_text": "What are the hours of the permit office in Houston, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "Houston",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "permit office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_b7ced54a",
+      "query_text": "What are the hours of the voter registration office in Phoenix, AZ?",
+      "query_type": "poi",
+      "context": {
+        "city": "Phoenix",
+        "state": "AZ",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "voter registration office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_041a8bb8",
+      "query_text": "What are the hours of the marriage license office in Philadelphia, PA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Philadelphia",
+        "state": "PA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "marriage license office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_5d6575cb",
+      "query_text": "What are the hours of the passport office in San Antonio, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "San Antonio",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "passport office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_0534bab8",
+      "query_text": "What are the hours of the social security office in San Diego, CA?",
+      "query_type": "poi",
+      "context": {
+        "city": "San Diego",
+        "state": "CA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "social security office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_64e78f42",
+      "query_text": "What are the hours of the unemployment office in Dallas, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "Dallas",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "unemployment office hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_32ef453b",
+      "query_text": "What are the hours of the city hall in Seattle, WA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Seattle",
+        "state": "WA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Hours TBD - requires fresh source]",
+      "gold_claims": [
+        {
+          "claim_text": "city hall hours are [TBD]",
+          "claim_type": "temporal",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "stale_fact",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "none",
+      "freshness_requirement_days": 30,
+      "refusal_expected": false,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Hours may have changed recently"
+    },
+    {
+      "query_id": "gg_5d129954",
+      "query_text": "What is the correct address for the marriage license office in Brooklyn, NY?",
+      "query_type": "poi",
+      "context": {
+        "city": "Brooklyn",
+        "state": "NY",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "marriage license office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_66a8f829",
+      "query_text": "What is the correct address for the passport office in Los Angeles, CA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Los Angeles",
+        "state": "CA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "passport office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_595c625d",
+      "query_text": "What is the correct address for the social security office in Chicago, IL?",
+      "query_type": "poi",
+      "context": {
+        "city": "Chicago",
+        "state": "IL",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "social security office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "test",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_1e5f3dd8",
+      "query_text": "What is the correct address for the unemployment office in Houston, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "Houston",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "unemployment office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_9cad26c4",
+      "query_text": "What is the correct address for the city hall in Phoenix, AZ?",
+      "query_type": "poi",
+      "context": {
+        "city": "Phoenix",
+        "state": "AZ",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "city hall address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_ebc6f765",
+      "query_text": "What is the correct address for the DMV in Philadelphia, PA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Philadelphia",
+        "state": "PA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "DMV address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_6f69b979",
+      "query_text": "What is the correct address for the county clerk office in San Antonio, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "San Antonio",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "county clerk office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_f0afd734",
+      "query_text": "What is the correct address for the tax assessor office in San Diego, CA?",
+      "query_type": "poi",
+      "context": {
+        "city": "San Diego",
+        "state": "CA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "tax assessor office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_ee2c137a",
+      "query_text": "What is the correct address for the permit office in Dallas, TX?",
+      "query_type": "poi",
+      "context": {
+        "city": "Dallas",
+        "state": "TX",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "permit office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    },
+    {
+      "query_id": "gg_a83318ad",
+      "query_text": "What is the correct address for the voter registration office in Seattle, WA?",
+      "query_type": "poi",
+      "context": {
+        "city": "Seattle",
+        "state": "WA",
+        "lat": null,
+        "lon": null,
+        "uncertainty_radius_m": null
+      },
+      "gold_answer": "[Address TBD - sources may conflict]",
+      "gold_claims": [
+        {
+          "claim_text": "voter registration office address is [TBD]",
+          "claim_type": "factual",
+          "evidence_doc_ids": []
+        }
+      ],
+      "gold_evidence": [],
+      "hard_case_bucket": "conflicting_sources",
+      "ambiguity_label": "unambiguous",
+      "conflict_label": "conflicting_sources",
+      "freshness_requirement_days": 30,
+      "refusal_expected": true,
+      "split": "dev",
+      "created_date": "2026-01-02",
+      "notes": "Find cases where Google Maps vs official site disagree"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\title{GroundedGeo: A Benchmark for Citation-Grounded, \\Freshness-Aware, Conflict-Aware Geographic QA}
+\author{Niki}
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Retrieval-augmented generation (RAG) systems are widely used for geographic and civic-information question answering, yet they often fail on real-world edge cases involving ambiguous place names, overlapping jurisdictions, time-sensitive facts, and conflicting sources. We introduce GroundedGeo, a research-grade benchmark of 200 evidence-grounded US geographic queries spanning five hard-case buckets (40 each): boundary-adjacent lookups, ambiguous place names, overlapping jurisdictions, stale facts, and conflicting sources. Each query includes curated evidence spans with source metadata to evaluate citation correctness, freshness compliance, and conflict handling.
+
+We implement five baselines: a closed-book LLM, na\"ive RAG, official-first RAG, freshness-filter RAG, and conflict-aware RAG. On a frozen test split (53 queries), closed-book achieves 17.0% accuracy, na\"ive RAG 79.2%, official-first 94.3%, freshness-filter 79.2%, and conflict-aware 92.5%. Bucket-specific results show that na\"ive RAG fails on conflicting sources (11.1\% conflict handled), while official-first and conflict-aware resolve conflicts (100\% and 88.9\%, respectively).
+\end{abstract}
+
+\section{Introduction}
+
+Geographic and civic question answering is a common use case for retrieval-augmented generation (RAG) systems. Users ask questions like ``What county is this address in?'', ``What are the DMV hours?'', or ``Who represents my district?'' These queries appear simple but contain hidden complexity:
+
+\begin{itemize}
+    \item \textbf{Ambiguous place names}: ``Springfield'' exists in 34 US states
+    \item \textbf{Overlapping jurisdictions}: A single location may fall under federal, state, county, city, and special district authorities
+    \item \textbf{Time-sensitive facts}: Office hours, fees, and policies change frequently
+    \item \textbf{Conflicting sources}: Google Maps may show different hours than official .gov websites
+\end{itemize}
+
+We introduce GroundedGeo, a benchmark designed to evaluate RAG systems on behavioral dimensions: citation correctness, clarification behavior, freshness compliance, and conflict handling.
+
+\section{Dataset}
+
+GroundedGeo contains 200 queries across five hard-case buckets (40 each):
+
+\begin{table}[h]
+\centering
+\caption{GroundedGeo Bucket Overview}
+\begin{tabular}{lcp{5cm}}
+\toprule
+\textbf{Bucket} & \textbf{Count} & \textbf{Target Behavior} \\
+\midrule
+Boundary Adjacent & 40 & Citation accuracy near borders \\
+Ambiguous Name & 40 & Ask clarification \\
+Overlapping Jurisdiction & 40 & Clarify district type \\
+Stale Fact & 40 & Include ``as of DATE'' \\
+Conflicting Sources & 40 & Flag conflict, prefer official \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Results}
+
+\begin{table}[h]
+\centering
+\caption{Overall Performance}
+\begin{tabular}{lcc}
+\toprule
+\textbf{System} & \textbf{Dev Acc.} & \textbf{Test Acc.} \\
+\midrule
+Closed-Book LLM & 18.4\% & 17.0\% \\
+Na\"ive RAG & 81.6\% & 79.2\% \\
+Official-First RAG & 98.6\% & \textbf{94.3\%} \\
+Freshness-Filter RAG & 81.6\% & 79.2\% \\
+Conflict-Aware RAG & 98.0\% & 92.5\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Bucket-Specific Behavioral Metrics (Test Split)}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+\textbf{System} & \textbf{Boundary} & \textbf{Clarif.} & \textbf{Overlap} & \textbf{Fresh.} & \textbf{Conflict} \\
+\midrule
+Closed-Book & 33.3\% & 27.3\% & 0.0\% & 0.0\% & 11.1\% \\
+Na\"ive RAG & 100.0\% & 100.0\% & 72.7\% & 0.0\% & 11.1\% \\
+Official-First & 100.0\% & 100.0\% & 72.7\% & 100.0\% & \textbf{100.0\%} \\
+Freshness-Filter & 100.0\% & 100.0\% & 72.7\% & 100.0\% & 11.1\% \\
+Conflict-Aware & 100.0\% & 100.0\% & 72.7\% & 100.0\% & 88.9\% \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\section{Conclusion}
+
+We introduced GroundedGeo, a benchmark of 200 evidence-grounded geographic queries. Standard RAG achieves 79.2% accuracy but fails on conflict handling (11.1\%). Adding official-source ranking raises accuracy to 94.3% and conflict handling to 100\%.
+
+\end{document}

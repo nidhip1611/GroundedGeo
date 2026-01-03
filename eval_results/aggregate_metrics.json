@@ -1,0 +1,383 @@
+{
+  "evaluation_date": "2026-01-02T19:51:22.952117",
+  "dataset_version": "1.0.0",
+  "split": "dev",
+  "total_queries": 147,
+  "systems": {
+    "closed_book": {
+      "system_name": "closed_book_llm",
+      "timestamp": "2026-01-02T19:51:22.844195",
+      "total_queries": 147,
+      "overall_accuracy": 0.184,
+      "overall_citation_rate": 0.0,
+      "overall_refusal_appropriate": 0.782,
+      "by_bucket": {
+        "boundary_adjacent": {
+          "bucket": "boundary_adjacent",
+          "total": 28,
+          "answer_correct": 9,
+          "accuracy": 0.321,
+          "citation_supported": 0,
+          "citation_rate": 0.0,
+          "refusal_appropriate": 24,
+          "refusal_rate": 0.857,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "ambiguous_name": {
+          "bucket": "ambiguous_name",
+          "total": 29,
+          "answer_correct": 12,
+          "accuracy": 0.414,
+          "citation_supported": 0,
+          "citation_rate": 0.0,
+          "refusal_appropriate": 12,
+          "refusal_rate": 0.414,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 12
+        },
+        "overlapping_jurisdiction": {
+          "bucket": "overlapping_jurisdiction",
+          "total": 29,
+          "answer_correct": 0,
+          "accuracy": 0.0,
+          "citation_supported": 0,
+          "citation_rate": 0.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "stale_fact": {
+          "bucket": "stale_fact",
+          "total": 30,
+          "answer_correct": 0,
+          "accuracy": 0.0,
+          "citation_supported": 0,
+          "citation_rate": 0.0,
+          "refusal_appropriate": 30,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "conflicting_sources": {
+          "bucket": "conflicting_sources",
+          "total": 31,
+          "answer_correct": 6,
+          "accuracy": 0.194,
+          "citation_supported": 0,
+          "citation_rate": 0.0,
+          "refusal_appropriate": 20,
+          "refusal_rate": 0.645,
+          "freshness_compliant": 0,
+          "conflict_handled": 6,
+          "clarification_asked": 0
+        }
+      }
+    },
+    "naive_rag": {
+      "system_name": "naive_rag",
+      "timestamp": "2026-01-02T19:51:22.862983",
+      "total_queries": 147,
+      "overall_accuracy": 0.816,
+      "overall_citation_rate": 1.0,
+      "overall_refusal_appropriate": 0.898,
+      "by_bucket": {
+        "boundary_adjacent": {
+          "bucket": "boundary_adjacent",
+          "total": 28,
+          "answer_correct": 28,
+          "accuracy": 1.0,
+          "citation_supported": 28,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 24,
+          "refusal_rate": 0.857,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "ambiguous_name": {
+          "bucket": "ambiguous_name",
+          "total": 29,
+          "answer_correct": 29,
+          "accuracy": 1.0,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "overlapping_jurisdiction": {
+          "bucket": "overlapping_jurisdiction",
+          "total": 29,
+          "answer_correct": 27,
+          "accuracy": 0.931,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "stale_fact": {
+          "bucket": "stale_fact",
+          "total": 30,
+          "answer_correct": 30,
+          "accuracy": 1.0,
+          "citation_supported": 30,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 30,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 2,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "conflicting_sources": {
+          "bucket": "conflicting_sources",
+          "total": 31,
+          "answer_correct": 6,
+          "accuracy": 0.194,
+          "citation_supported": 31,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 20,
+          "refusal_rate": 0.645,
+          "freshness_compliant": 0,
+          "conflict_handled": 6,
+          "clarification_asked": 0
+        }
+      }
+    },
+    "official_first": {
+      "system_name": "official_first_rag",
+      "timestamp": "2026-01-02T19:51:22.884025",
+      "total_queries": 147,
+      "overall_accuracy": 0.986,
+      "overall_citation_rate": 1.0,
+      "overall_refusal_appropriate": 0.898,
+      "by_bucket": {
+        "boundary_adjacent": {
+          "bucket": "boundary_adjacent",
+          "total": 28,
+          "answer_correct": 28,
+          "accuracy": 1.0,
+          "citation_supported": 28,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 24,
+          "refusal_rate": 0.857,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "ambiguous_name": {
+          "bucket": "ambiguous_name",
+          "total": 29,
+          "answer_correct": 29,
+          "accuracy": 1.0,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "overlapping_jurisdiction": {
+          "bucket": "overlapping_jurisdiction",
+          "total": 29,
+          "answer_correct": 27,
+          "accuracy": 0.931,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "stale_fact": {
+          "bucket": "stale_fact",
+          "total": 30,
+          "answer_correct": 30,
+          "accuracy": 1.0,
+          "citation_supported": 30,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 30,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 30,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "conflicting_sources": {
+          "bucket": "conflicting_sources",
+          "total": 31,
+          "answer_correct": 31,
+          "accuracy": 1.0,
+          "citation_supported": 31,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 20,
+          "refusal_rate": 0.645,
+          "freshness_compliant": 0,
+          "conflict_handled": 31,
+          "clarification_asked": 0
+        }
+      }
+    },
+    "freshness_filter": {
+      "system_name": "freshness_filter_rag",
+      "timestamp": "2026-01-02T19:51:22.914000",
+      "total_queries": 147,
+      "overall_accuracy": 0.816,
+      "overall_citation_rate": 1.0,
+      "overall_refusal_appropriate": 0.898,
+      "by_bucket": {
+        "boundary_adjacent": {
+          "bucket": "boundary_adjacent",
+          "total": 28,
+          "answer_correct": 28,
+          "accuracy": 1.0,
+          "citation_supported": 28,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 24,
+          "refusal_rate": 0.857,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "ambiguous_name": {
+          "bucket": "ambiguous_name",
+          "total": 29,
+          "answer_correct": 29,
+          "accuracy": 1.0,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "overlapping_jurisdiction": {
+          "bucket": "overlapping_jurisdiction",
+          "total": 29,
+          "answer_correct": 27,
+          "accuracy": 0.931,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "stale_fact": {
+          "bucket": "stale_fact",
+          "total": 30,
+          "answer_correct": 30,
+          "accuracy": 1.0,
+          "citation_supported": 30,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 30,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 30,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "conflicting_sources": {
+          "bucket": "conflicting_sources",
+          "total": 31,
+          "answer_correct": 6,
+          "accuracy": 0.194,
+          "citation_supported": 31,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 20,
+          "refusal_rate": 0.645,
+          "freshness_compliant": 0,
+          "conflict_handled": 6,
+          "clarification_asked": 0
+        }
+      }
+    },
+    "conflict_aware": {
+      "system_name": "conflict_aware_rag",
+      "timestamp": "2026-01-02T19:51:22.933129",
+      "total_queries": 147,
+      "overall_accuracy": 0.98,
+      "overall_citation_rate": 1.0,
+      "overall_refusal_appropriate": 0.898,
+      "by_bucket": {
+        "boundary_adjacent": {
+          "bucket": "boundary_adjacent",
+          "total": 28,
+          "answer_correct": 28,
+          "accuracy": 1.0,
+          "citation_supported": 28,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 24,
+          "refusal_rate": 0.857,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "ambiguous_name": {
+          "bucket": "ambiguous_name",
+          "total": 29,
+          "answer_correct": 29,
+          "accuracy": 1.0,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "overlapping_jurisdiction": {
+          "bucket": "overlapping_jurisdiction",
+          "total": 29,
+          "answer_correct": 27,
+          "accuracy": 0.931,
+          "citation_supported": 29,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 29,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 0,
+          "conflict_handled": 0,
+          "clarification_asked": 29
+        },
+        "stale_fact": {
+          "bucket": "stale_fact",
+          "total": 30,
+          "answer_correct": 30,
+          "accuracy": 1.0,
+          "citation_supported": 30,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 30,
+          "refusal_rate": 1.0,
+          "freshness_compliant": 30,
+          "conflict_handled": 0,
+          "clarification_asked": 0
+        },
+        "conflicting_sources": {
+          "bucket": "conflicting_sources",
+          "total": 31,
+          "answer_correct": 30,
+          "accuracy": 0.968,
+          "citation_supported": 31,
+          "citation_rate": 1.0,
+          "refusal_appropriate": 20,
+          "refusal_rate": 0.645,
+          "freshness_compliant": 0,
+          "conflict_handled": 30,
+          "clarification_asked": 0
+        }
+      }
+    }
+  }
+}

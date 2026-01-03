@@ -1,0 +1,47 @@
+
+% ============================================================
+% GROUNDEDGEO PAPER TABLES
+% ============================================================
+
+% Table 1: Main Results
+\begin{table}[t]
+\centering
+\caption{Overall performance on GroundedGeo. Best results in \textbf{bold}.}
+\label{tab:main-results}
+\begin{tabular}{lcc}
+\toprule
+\textbf{System} & \textbf{Dev Acc.} & \textbf{Test Acc.} \\
+\midrule
+closed-book-llm & 18.4 & 17.0 \\
+naive-rag & 81.6 & 79.2 \\
+official-first-rag & \textbf{98.6} & 94.3 \\
+freshness-filter-rag & 81.6 & 79.2 \\
+conflict-aware-rag & 98.0 & 92.5 \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 2: Bucket-Specific Metrics (Test)
+\begin{table}[t]
+\centering
+\caption{Bucket-specific metrics on test split. Each column shows the primary success metric for that bucket.}
+\label{tab:bucket-metrics}
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{lccccc}
+\toprule
+& \multicolumn{5}{c}{\textbf{Test Split}} \\
+\cmidrule(lr){2-6}
+\textbf{System} & \textbf{Boundary} & \textbf{Clarif.} & \textbf{Overlap} & \textbf{Fresh.} & \textbf{Conflict} \\
+& Accuracy & Asked & Accuracy & Compliant & Handled \\
+\midrule
+closed-book-llm & 25.0 & 45.5 & 0.0 & 0.0 & 11.1 \\
+naive-rag & 100.0 & 100.0 & 72.7 & 0.0 & 11.1 \\
+official-first-rag & 100.0 & 100.0 & 72.7 & 100.0 & 100.0 \\
+freshness-filter-rag & 100.0 & 100.0 & 72.7 & 100.0 & 11.1 \\
+conflict-aware-rag & 100.0 & 100.0 & 72.7 & 100.0 & 88.9 \\
+
+\bottomrule
+\end{tabular}
+}
+\end{table}

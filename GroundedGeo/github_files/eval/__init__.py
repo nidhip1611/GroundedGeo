@@ -1,1 +1,0 @@
-"""GroundedGeo Evaluation Module"""\n

@@ -1,1 +1,21 @@
-
+cff-version: 1.2.0
+message: "If you use GroundedGeo, please cite it."
+title: "GroundedGeo: A Benchmark for Citation-Grounded Geographic QA"
+version: 1.0.0
+doi: 10.5281/zenodo.18142378
+date-released: 2025-01-03
+authors:
+  - family-names: Pandya
+    given-names: Nidhi
+    affiliation: Pace University
+license: CC-BY-4.0
+repository-code: "https://github.com/nidhip1611/GroundedGeo"
+url: "https://huggingface.co/datasets/nidhip1611/groundedgeo"
+keywords:
+  - rag
+  - retrieval-augmented-generation
+  - benchmark
+  - citations
+  - geography
+  - question-answering
+abstract: "GroundedGeo is a research-grade benchmark for evaluating RAG systems on location-based queries with verifiable citations, freshness awareness, and conflict handling. Contains 200 queries across 5 hard-case buckets."

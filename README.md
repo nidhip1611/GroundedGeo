@@ -162,3 +162,11 @@ print(f"Loaded {len(runner.queries)} queries")
 - **Author**: Nidhi Pandya
 - **Email**: np59133n@pace.edu
 - **Institution**: Pace University, Seidenberg School of Computer Science
+
+---
+
+## Related Projects
+
+- [BoundaryBench](https://github.com/nidhip1611/BoundaryBench) — LLM geospatial boundary diagnosis
+- [GroundedGeo](https://github.com/nidhip1611/GroundedGeo) — RAG citation grounding benchmark
+- [NewsScope](https://github.com/nidhip1611/NewsScope) — Cross-domain news verification

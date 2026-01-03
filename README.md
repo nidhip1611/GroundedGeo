@@ -1,8 +1,8 @@
 # GroundedGeo: A Benchmark for Citation-Grounded Geographic QA
 
-[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/YOUR_USERNAME/groundedgeo)
+[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/nidhip1611/groundedgeo)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-[![arXiv](https://img.shields.io/badge/arXiv-2501.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2501.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **GroundedGeo** is a research-grade benchmark for evaluating RAG systems on location-based queries with verifiable citations, freshness awareness, and conflict detection.
@@ -35,8 +35,8 @@
 
 ### Installation
 ```bash
-git clone https://github.com/YOUR_USERNAME/groundedgeo.git
-cd groundedgeo
+git clone https://github.com/nidhip1611/GroundedGeo.git
+cd GroundedGeo
 pip install -r requirements.txt
 ```
 
@@ -63,7 +63,7 @@ test_queries = [q for q in queries if q['split'] == 'test']
 ```python
 from datasets import load_dataset
 
-dataset = load_dataset("YOUR_USERNAME/groundedgeo")
+dataset = load_dataset("nidhip1611/groundedgeo")
 print(dataset)
 ```
 
@@ -84,32 +84,32 @@ print(dataset)
 | System | Boundary | Clarif. | Overlap | Fresh. | Conflict |
 |--------|----------|---------|---------|--------|----------|
 | Closed-Book | 25.0% | 45.5% | 0.0% | 0.0% | 11.1% |
-| Naïve RAG | 100% | 100% | 72.7% | 0.0% | 11.1% |
-| **Official-First** | 100% | 100% | 72.7% | 100% | **100%** |
-| Freshness-Filter | 100% | 100% | 72.7% | 100% | 11.1% |
-| Conflict-Aware | 100% | 100% | 72.7% | 100% | 88.9% |
+| Naïve RAG | 100.0% | 100.0% | 72.7% | 0.0% | 11.1% |
+| **Official-First** | 100.0% | 100.0% | 72.7% | 100.0% | **100.0%** |
+| Freshness-Filter | 100.0% | 100.0% | 72.7% | 100.0% | 11.1% |
+| Conflict-Aware | 100.0% | 100.0% | 72.7% | 100.0% | 88.9% |
 
 ## 📁 Repository Structure
 ```
-groundedgeo/
+GroundedGeo/
 ├── data/
 │   ├── groundedgeo_v1.0.json      # Full dataset with metadata
 │   ├── groundedgeo_v1.0.jsonl     # HuggingFace format
 │   └── groundedgeo_v1.0.csv       # Spreadsheet view
 ├── eval/
 │   ├── harness.py                 # Evaluation harness
-│   ├── baselines.py               # 5 baseline implementations
-│   └── metrics.py                 # Scoring functions
+│   └── __init__.py
 ├── results/
 │   ├── final_results.json         # Frozen test results
-│   └── predictions/               # Per-system outputs
+│   ├── error_analysis.json        # Error analysis
+│   └── aggregate_metrics.json     # Dev metrics
 ├── paper/
+│   ├── PAPER_DRAFT.md             # Paper draft
 │   ├── paper.tex                  # LaTeX source
-│   └── figures/                   # Paper figures
-├── notebooks/
-│   └── GroundedGeo_Phase2.ipynb   # Dataset creation notebook
+│   └── paper_tables.tex           # LaTeX tables
 ├── requirements.txt
 ├── LICENSE
+├── CONTRIBUTING.md
 └── README.md
 ```
 
@@ -146,27 +146,20 @@ Each query contains:
 ## 🏃 Running Evaluation
 ```python
 from eval.harness import EvalRunner
-from eval.baselines import OfficialFirstRAG
 
 # Initialize
 runner = EvalRunner(dataset_path='data/groundedgeo_v1.0.json')
-system = OfficialFirstRAG()
 
-# Run on dev split
-metrics = runner.run(system, split='dev')
-print(f"Accuracy: {metrics.overall_accuracy:.1%}")
-
-# Run on test split (frozen)
-test_metrics = runner.run(system, split='test')
-print(f"Test Accuracy: {test_metrics.overall_accuracy:.1%}")
+# Load and print stats
+print(f"Loaded {len(runner.queries)} queries")
 ```
 
 ## 📝 Citation
 ```bibtex
-@article{groundedgeo2025,
+@article{pandya2025groundedgeo,
   title={GroundedGeo: A Benchmark for Citation-Grounded, Freshness-Aware, Conflict-Aware Geographic QA},
   author={Pandya, Nidhi},
-  journal={arXiv preprint arXiv:2501.XXXXX},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2025}
 }
 ```
@@ -185,12 +178,12 @@ print(f"Test Accuracy: {test_metrics.overall_accuracy:.1%}")
 ## 📧 Contact
 
 - **Author**: Nidhi Pandya
-- **Email**: [your.email@example.com]
+- **Email**: np59133n@pace.edu
 - **Institution**: Pace University, Seidenberg School of Computer Science
 
 ---
 
 **Part of the Grounded AI Research Agenda:**
-- [BoundaryBench](https://github.com/YOUR_USERNAME/boundarybench) - LLM geospatial boundary diagnosis
-- [GroundedGeo](https://github.com/YOUR_USERNAME/groundedgeo) - RAG citation grounding benchmark
-- [NewsScope](https://github.com/YOUR_USERNAME/newsscope) - Cross-domain news verification
+- [BoundaryBench](https://github.com/nidhip1611/boundarybench) - LLM geospatial boundary diagnosis
+- [GroundedGeo](https://github.com/nidhip1611/GroundedGeo) - RAG citation grounding benchmark
+- [NewsScope](https://github.com/nidhip1611/newsscope) - Cross-domain news verification

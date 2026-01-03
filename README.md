@@ -1,8 +1,5 @@
 # GroundedGeo: A Benchmark for Citation-Grounded Geographic QA
 
-[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/nidhip1611/groundedgeo)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
-[![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **GroundedGeo** is a research-grade benchmark for evaluating RAG systems on location-based queries with verifiable citations, freshness awareness, and conflict detection.
@@ -44,27 +41,11 @@ pip install -r requirements.txt
 ```python
 import json
 
-# Load full dataset
 with open('data/groundedgeo_v1.0.json') as f:
     dataset = json.load(f)
 
 queries = dataset['queries']
 print(f"Loaded {len(queries)} queries")
-
-# Filter by bucket
-boundary_queries = [q for q in queries if q['hard_case_bucket'] == 'boundary_adjacent']
-
-# Filter by split
-dev_queries = [q for q in queries if q['split'] == 'dev']
-test_queries = [q for q in queries if q['split'] == 'test']
-```
-
-### Using HuggingFace Datasets
-```python
-from datasets import load_dataset
-
-dataset = load_dataset("nidhip1611/groundedgeo")
-print(dataset)
 ```
 
 ## 📈 Benchmark Results
@@ -93,74 +74,33 @@ print(dataset)
 ```
 GroundedGeo/
 ├── data/
-│   ├── groundedgeo_v1.0.json      # Full dataset with metadata
-│   ├── groundedgeo_v1.0.jsonl     # HuggingFace format
-│   └── groundedgeo_v1.0.csv       # Spreadsheet view
+│   ├── groundedgeo_v1.0.json
+│   ├── groundedgeo_v1.0.jsonl
+│   └── groundedgeo_v1.0.csv
 ├── eval/
-│   ├── harness.py                 # Evaluation harness
+│   ├── harness.py
 │   └── __init__.py
 ├── results/
-│   ├── final_results.json         # Frozen test results
-│   ├── error_analysis.json        # Error analysis
-│   └── aggregate_metrics.json     # Dev metrics
+│   ├── final_results.json
+│   ├── error_analysis.json
+│   └── aggregate_metrics.json
 ├── paper/
-│   ├── PAPER_DRAFT.md             # Paper draft
-│   ├── paper.tex                  # LaTeX source
-│   └── paper_tables.tex           # LaTeX tables
+│   ├── PAPER_DRAFT.md
+│   ├── paper.tex
+│   └── paper_tables.tex
 ├── requirements.txt
 ├── LICENSE
 ├── CONTRIBUTING.md
 └── README.md
 ```
 
-## 🔬 Query Schema
-
-Each query contains:
-```json
-{
-  "query_id": "gg_boundary_0001",
-  "query_text": "What county contains (40.7128, -74.0060)?",
-  "query_type": "boundary",
-  "gold_answer": "New York County, New York",
-  "hard_case_bucket": "boundary_adjacent",
-  "split": "dev",
-  "gold_evidence": [
-    {
-      "doc_id": "tiger_36061",
-      "url": "https://www.census.gov/geo/...",
-      "source_type": "official",
-      "passage_text": "TIGER/Line 2024: point intersects New York County...",
-      "span_start": 42,
-      "span_end": 65,
-      "retrieved_date": "2025-12-15",
-      "source_published_date": "2024-01-01"
-    }
-  ],
-  "ambiguity_label": "unambiguous",
-  "conflict_label": "none",
-  "freshness_requirement_days": null,
-  "refusal_expected": false
-}
-```
-
-## 🏃 Running Evaluation
-```python
-from eval.harness import EvalRunner
-
-# Initialize
-runner = EvalRunner(dataset_path='data/groundedgeo_v1.0.json')
-
-# Load and print stats
-print(f"Loaded {len(runner.queries)} queries")
-```
-
 ## 📝 Citation
 ```bibtex
-@article{pandya2025groundedgeo,
-  title={GroundedGeo: A Benchmark for Citation-Grounded, Freshness-Aware, Conflict-Aware Geographic QA},
+@misc{pandya2025groundedgeo,
+  title={GroundedGeo: A Benchmark for Citation-Grounded Geographic QA},
   author={Pandya, Nidhi},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+  year={2025},
+  url={https://github.com/nidhip1611/GroundedGeo}
 }
 ```
 
@@ -169,21 +109,7 @@ print(f"Loaded {len(runner.queries)} queries")
 - **Dataset**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 - **Code**: [MIT License](LICENSE)
 
-## 🙏 Acknowledgments
-
-- US Census Bureau for TIGER/Line boundary data
-- USGS for GNIS place name data
-- Various state DMV and city government websites for civic information
-
 ## 📧 Contact
 
 - **Author**: Nidhi Pandya
-- **Email**: np59133n@pace.edu
 - **Institution**: Pace University, Seidenberg School of Computer Science
-
----
-
-**Part of the Grounded AI Research Agenda:**
-- [BoundaryBench](https://github.com/nidhip1611/boundarybench) - LLM geospatial boundary diagnosis
-- [GroundedGeo](https://github.com/nidhip1611/GroundedGeo) - RAG citation grounding benchmark
-- [NewsScope](https://github.com/nidhip1611/newsscope) - Cross-domain news verification

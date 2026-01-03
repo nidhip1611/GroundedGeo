@@ -1,7 +1,7 @@
 # GroundedGeo: A Benchmark for Citation-Grounded Geographic QA
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18142378.svg)](https://doi.org/10.5281/zenodo.18142378)
-[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/nidhip1611/groundedgeo)
+[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/nidhipandya/GroundedGeo)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **GroundedGeo** is a research-grade benchmark for evaluating RAG systems on location-based queries with **verifiable citations**, **freshness awareness**, and **conflict handling**.

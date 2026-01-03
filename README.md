@@ -147,12 +147,13 @@ print(f"Loaded {len(runner.queries)} queries")
 
 ## 📝 Citation
 ```bibtex
-@misc{pandya2025groundedgeo,
-  title={GroundedGeo: A Benchmark for Citation-Grounded Geographic QA},
-  author={Pandya, Nidhi},
-  year={2025},
-  doi={10.5281/zenodo.18142378},
-  url={https://github.com/nidhip1611/GroundedGeo}
+@dataset{pandya2025groundedgeo,
+  author    = {Pandya, Nidhi},
+  title     = {GroundedGeo: A Benchmark for Citation-Grounded Geographic QA},
+  publisher = {Zenodo},
+  year      = {2025},
+  doi       = {10.5281/zenodo.18142378},
+  url       = {https://doi.org/10.5281/zenodo.18142378}
 }
 ```
 

@@ -151,7 +151,7 @@ print(f"Loaded {len(runner.queries)} queries")
   author    = {Pandya, Nidhi},
   title     = {GroundedGeo: A Benchmark for Citation-Grounded Geographic QA},
   publisher = {Zenodo},
-  year      = {2025},
+  year      = {2026},
   doi       = {10.5281/zenodo.18142378},
   url       = {https://doi.org/10.5281/zenodo.18142378}
 }

@@ -1,5 +1,7 @@
 # GroundedGeo: A Benchmark for Citation-Grounded Geographic QA
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18142378.svg)](https://doi.org/10.5281/zenodo.18142378)
+[![Dataset on HuggingFace](https://img.shields.io/badge/🤗-Dataset-yellow)](https://huggingface.co/datasets/nidhip1611/groundedgeo)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 **GroundedGeo** is a research-grade benchmark for evaluating RAG systems on location-based queries with **verifiable citations**, **freshness awareness**, and **conflict handling**.
@@ -52,6 +54,14 @@ dev = [q for q in queries if q["split"] == "dev"]
 test = [q for q in queries if q["split"] == "test"]
 ```
 
+### Using HuggingFace Datasets
+```python
+from datasets import load_dataset
+
+ds = load_dataset("nidhip1611/groundedgeo", data_files="groundedgeo_v1.0.jsonl")
+print(ds)
+```
+
 ## 📈 Benchmark Results
 
 ### Overall Accuracy
@@ -84,11 +94,10 @@ GroundedGeo/
 ├── eval/
 │   ├── harness.py
 │   └── __init__.py
-├── results/
+├── eval_results/
 │   ├── final_results.json
 │   ├── error_analysis.json
-│   └── aggregate_metrics.json
-├── paper/
+│   ├── aggregate_metrics.json
 │   ├── PAPER_DRAFT.md
 │   ├── paper.tex
 │   └── paper_tables.tex
@@ -139,9 +148,10 @@ print(f"Loaded {len(runner.queries)} queries")
 ## 📝 Citation
 ```bibtex
 @misc{pandya2025groundedgeo,
-  title={GroundedGeo: A Benchmark for Citation-Grounded, Freshness-Aware, Conflict-Aware Geographic QA},
+  title={GroundedGeo: A Benchmark for Citation-Grounded Geographic QA},
   author={Pandya, Nidhi},
   year={2025},
+  doi={10.5281/zenodo.18142378},
   url={https://github.com/nidhip1611/GroundedGeo}
 }
 ```
